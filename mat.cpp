@@ -96,9 +96,6 @@ namespace ariel
         }
         return carpet;
     }
-
-
-
 };
 
 
