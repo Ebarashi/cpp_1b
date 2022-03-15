@@ -5,7 +5,8 @@
 #include <vector>
 
 using namespace std;
-namespace ariel{
+namespace ariel
+{
     string mat(int c, int r, char s1, char s2)
     {
 
@@ -33,7 +34,7 @@ namespace ariel{
         
         if (r <= 0 || c <= 0)
         {
-            throw invalid_argument("the carpet size must be at least 1");
+            throw invalid_argument("the carpet size must be at least 1 and the rows, columns must be positive");
         }
        
         if ((s1 < leftLimit || s1 > rightLimit) || (s2 < leftLimit || s2 > rightLimit))
