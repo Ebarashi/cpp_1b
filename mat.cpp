@@ -10,18 +10,6 @@ namespace ariel
     string mat(int c, int r, char s1, char s2)
     {
 
-        vector<vector<char>> mat(r, vector<char> (c));
-        
-        char curr_s = s1;
-
-        // the start values for the current frame
-        int first_r = 0;
-        int last_r = r-1;
-        int first_c = 0;
-        int last_c = c-1;
-        int size = 1;
-
-
         //bounds for illegal arguments
         int const leftLimit = 33;
         int const rightLimit = 126;
@@ -41,6 +29,19 @@ namespace ariel
         {
             throw invalid_argument("invalid sign need to be between 33-126 in the ascii tabel");
         }
+
+        vector<vector<char>> mat(r, vector<char> (c));
+        
+        char curr_s = s1;
+
+        // the start values for the current frame
+        int first_r = 0;
+        int last_r = r-1;
+        int first_c = 0;
+        int last_c = c-1;
+        int size = 1;
+
+
 
 
         // the while loop ends when the function finished to fill all the areas in the mat - the size of the carpet
